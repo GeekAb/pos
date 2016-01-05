@@ -1,3 +1,7 @@
 # testPrj
 
-a [Sails](http://sailsjs.org) application
+[Sails](http://sailsjs.org) application
+
+# learningsails
+Learning Sails
+
