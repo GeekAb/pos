@@ -1,0 +1,22 @@
+{
+  "name": "assets",
+  "homepage": "https://github.com/GeekAb/pos",
+  "authors": [
+    "GeekAb <nit.abhi85@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
