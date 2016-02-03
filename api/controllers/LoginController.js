@@ -4,9 +4,9 @@
  * @description :: Server-side logic for managing Logins
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-
-global.jQuery = require('jquery');
-var bootstrap = require("bootstrap-material-design");
+//
+//global.jQuery = require('jquery');
+//var bootstrap = require("bootstrap-material-design");
 
 module.exports = {   
     

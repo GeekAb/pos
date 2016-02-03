@@ -16,7 +16,8 @@ var tmpPath = '.tmp/public/';
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  'styles/**/*.css',
+  'extra/css/*.css',
 ];
 
 
@@ -33,6 +34,8 @@ var jsFilesToInject = [
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js',
+    
+  'extra/js/*.js',
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'

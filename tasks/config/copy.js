@@ -17,20 +17,34 @@ module.exports = function(grunt) {
 
 	grunt.config.set('copy', {
 		dev: {
-			files: [{
-				expand: true,
-				cwd: './assets',
-				src: ['**/*.!(coffee|less)'],
-				dest: '.tmp/public'
-			}]
+			files: [
+                {
+                    expand: true,
+                    cwd: './node_modules/bootstrap-material-design/dist',
+                    src: ['**/*'],
+                    dest: '.tmp/public/extra'
+                },
+                {
+                    expand: true,
+                    cwd: './node_modules/bootstrap-material-design/scripts',
+                    src: ['**/*'],
+                    dest: '.tmp/public/extra'
+                },
+                {
+                    expand: true,
+                    cwd: './assets',
+                    src: ['**/*.!(coffee|less)'],
+                    dest: '.tmp/public'
+			     }]
 		},
 		build: {
-			files: [{
-				expand: true,
-				cwd: '.tmp/public',
-				src: ['**/*'],
-				dest: 'www'
-			}]
+			files: [
+                {
+                    expand: true,
+                    cwd: '.tmp/public',
+                    src: ['**/*'],
+                    dest: 'www'
+                }]
 		}
 	});
 
