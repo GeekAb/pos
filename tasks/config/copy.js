@@ -20,15 +20,27 @@ module.exports = function(grunt) {
 			files: [
                 {
                     expand: true,
-                    cwd: './node_modules/bootstrap-material-design/dist',
-                    src: ['**/*'],
-                    dest: '.tmp/public/extra'
+                    cwd: './node_modules/bootstrap-material-design/node_modules/bootstrap/dist/css',
+                    src: ['*.min.css'],
+                    dest: '.tmp/public/bootstrap/css'
                 },
                 {
                     expand: true,
-                    cwd: './node_modules/bootstrap-material-design/scripts',
-                    src: ['**/*'],
-                    dest: '.tmp/public/extra'
+                    cwd: './node_modules/bootstrap-material-design/node_modules/bootstrap/dist/js',
+                    src: ['bootstrap.min.js'],
+                    dest: '.tmp/public/bootstrap/js'
+                },
+                {
+                    expand: true,
+                    cwd: './node_modules/bootstrap-material-design/node_modules/bootstrap/dist/fonts',
+                    src: ['*'],
+                    dest: '.tmp/public/bootstrap/fonts'
+                },
+                {
+                    expand: true,
+                    cwd: './node_modules/bootstrap-material-design/dist',
+                    src: ['**/*.min.*'],
+                    dest: '.tmp/public/material'
                 },
                 {
                     expand: true,
