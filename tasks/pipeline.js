@@ -17,8 +17,8 @@ var tmpPath = '.tmp/public/';
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'styles/**/*.css',
-  'bootstrap/css/*',
-  'material/css/*',
+  'bootstrap/css/*.css',
+  'material/css/*.css',
 ];
 
 
@@ -36,9 +36,9 @@ var jsFilesToInject = [
   // will be injected here in no particular order.
   'js/**/*.js',
     
-  'bootstrap/fonts/*',
-  'bootstrap/js/*',
-  'material/js/*',
+//  'bootstrap/fonts/*',
+  'bootstrap/js/*.js',
+  'material/js/*.js',
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'
