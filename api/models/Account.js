@@ -15,17 +15,13 @@ module.exports = {
         },
 
         password: {
-            type : 'integer',
+            type : 'string',
             required : true,
-            enum : [0, 1, 2],
-            defaultsTo : 1
+            defaultsTo : ''
         },
         
         userid: {
-            type : 'integer',
-            required : true,
-            enum : [0, 1, 2],
-            defaultsTo : 1
+            model : 'User'
         },
         
         status: {
