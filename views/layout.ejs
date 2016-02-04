@@ -94,13 +94,17 @@
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/dependencies/jquery-2.2.0.js"></script>
+    <script src="/js/additional/user.js"></script>
+    <script src="/js/additional/user.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/material/js/material.min.js"></script>
     <script src="/material/js/ripples.min.js"></script>
     <!--SCRIPTS END-->
     
     <script>
-        $.material.init()
+        $(document).ready(function () {
+            $.material.init();
+        });
     </script>
   </body>
 </html>
