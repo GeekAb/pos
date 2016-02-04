@@ -40,7 +40,8 @@ module.exports = {
                         sails.log(data.password + usr.username);
                         if (data.password === usr.password) {
                             req.session.user = usr;
-                            res.send(usr);
+//                            res.send(usr);
+                            res.redirect('account/');
                         } else {
                             // Set the error header
                             res.set('error', 'Wrong Password');
@@ -58,6 +59,14 @@ module.exports = {
             });
         
         return res;
+    },
+    
+    show : function (req, res, next) {
+        sails.log(req.param('id'));
+        Account.findOneById(req.param('id'), function (err, user) {
+           
+            res.send(user);
+        });
     },
 
     /**
