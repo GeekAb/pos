@@ -8,6 +8,8 @@
 
 module.exports = {
 
+    schema : true,
+    
     attributes: {
         username: {
             type: 'string',
@@ -30,6 +32,14 @@ module.exports = {
             enum : [0, 1, 2],
             defaultsTo : 1
         },
+    },
+    
+    toJSON : function () {
+        var obj = this.toObject();
+        
+        delete obj.password;
+        
+        return obj;
     }
 };
 

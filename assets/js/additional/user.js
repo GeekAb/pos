@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $("#btn-login").click(function () {
-        var username = $("#login-username").val();
-        var password = $("#login-password").val();
+    $("#login").click(function () {
+        var username = $("#username").val();
+        var password = $("#password").val();
         if (username && password) {
             $.post(
                 '/login/validate', {
@@ -10,6 +10,8 @@ $(document).ready(function () {
                 },
                 function (data) {
                     console.log(data);
+                    alert(data);
+                    window.location = '/user/showall';
                 }
             ).fail(function (res) {
                 alert("Error: " + res.getResponseHeader("error"));
