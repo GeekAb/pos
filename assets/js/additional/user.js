@@ -11,10 +11,13 @@ $(document).ready(function () {
                 function (data) {
                     console.log(data);
                     alert(data);
-                    window.location = '/user/showall';
+//                    window.location = '/user/showall';
                 }
             ).fail(function (res) {
-                alert("Error: " + res.getResponseHeader("error"));
+                
+                console.log(res.responseText.message);
+                alert(res.message);
+                alert("Error: " + res.getResponseHeader("message"));
             });
         } else {
             alert("A username and password is required");

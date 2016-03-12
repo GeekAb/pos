@@ -23,14 +23,15 @@ module.exports = {
         
         passport.authenticate('local', function (err, user, info) {
             if ((err) || (!user)) {
-                return res.send({
-                    message: 'login failed'
+                return res.send(400, {
+                    message : 'Login failed'
                 });
-                res.send(err);
+                
             }
             req.logIn(user, function (err) {
-                if (err) res.send(err);
-                return res.send({
+                
+                if (err) res.send(400, err);
+                return res.send(200, {
                     message: 'login successful'
                 });
             });
